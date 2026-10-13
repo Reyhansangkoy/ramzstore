@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "http://deline.cloud:4290/api/:path*"
-    }
-  ]
-}
