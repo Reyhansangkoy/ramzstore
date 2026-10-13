@@ -465,7 +465,7 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
 .pk-grid.tema{grid-template-columns:repeat(3,1fr)}
 .galeri{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-top:22px}
 .galeri:not(:has(img)){display:none}
-.galeri img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.22)}
+.galeri img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:rgba(255,255,255,.08);border-radius:12px;border:1px solid rgba(255,255,255,.22)}
 @media(min-width:3000px){:root{--maks:1800px}body{font-size:24px}}
 @media(min-width:1600px){:root{--maks:1280px}body{font-size:18px}}
 @media(min-width:2200px){:root{--maks:1480px}body{font-size:20px}}
@@ -590,7 +590,7 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
           <li data-t="etc">dll</li>
         </ul>
         <div class="tek"><span>Node.js</span><span>discord.js</span><span>Express</span><span>OAuth2</span><span>QRIS</span><span data-t="etc">dll</span></div>
-        <div class="galeri"><img src="gambar/pandu-1.jpg" alt="Tangkapan layar Pandu Hub 1" loading="lazy" onerror="this.remove()"><img src="gambar/pandu-2.jpg" alt="Tangkapan layar Pandu Hub 2" loading="lazy" onerror="this.remove()"><img src="gambar/pandu-3.jpg" alt="Tangkapan layar Pandu Hub 3" loading="lazy" onerror="this.remove()"></div>
+        <div class="galeri"><img src="gambar/pandu-1.jpg" width="960" height="540" alt="Tangkapan layar Pandu Hub 1" loading="lazy" onerror="this.remove()"><img src="gambar/pandu-2.jpg" width="960" height="540" alt="Tangkapan layar Pandu Hub 2" loading="lazy" onerror="this.remove()"><img src="gambar/pandu-3.jpg" width="960" height="540" alt="Tangkapan layar Pandu Hub 3" loading="lazy" onerror="this.remove()"></div>
         <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn kuning sm" href="https://panduhub.my.id" target="_blank" rel="noopener">Kunjungi Pandu Hub ↗</a><a class="btn alt sm" style="border-color:#fff;color:#fff" href="#riwayat">Baca studi kasus lengkap</a></div>
       </article>
       <article class="kecil">
