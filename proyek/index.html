@@ -469,6 +469,14 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
 @media(min-width:3000px){:root{--maks:1800px}body{font-size:24px}}
 @media(min-width:1600px){:root{--maks:1280px}body{font-size:18px}}
 @media(min-width:2200px){:root{--maks:1480px}body{font-size:20px}}
+.pn-s{padding:40px 0 56px}
+.pn{display:flex;gap:14px;align-items:stretch}
+.pn .btn{flex:0 1 calc(50% - 7px);justify-content:flex-start;gap:14px;padding:16px 20px;text-align:left;line-height:1.25}
+.pn .btn.nx{margin-left:auto;text-align:right;justify-content:flex-end}
+.pn small{display:block;font:500 12px/1.2 var(--body);opacity:.75;margin-bottom:4px}
+.pn b{display:block;font:700 16px/1.2 var(--body)}
+.pn .ar{font-size:20px}
+@media(max-width:520px){.pn{flex-direction:column}.pn .btn,.pn .btn.nx{flex:none;width:100%;margin-left:0}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"RamzStore","description":"Pengembangan website, sistem admin, integrasi pembayaran, dan otomasi untuk bisnis kecil maupun perusahaan besar.","email":"reyeuy75@gmail.com","telephone":"+6285793645776","areaServed":"ID","address":{"@type":"PostalAddress","addressLocality":"Sukabumi","addressCountry":"ID"}}</script>
 </head>
@@ -537,6 +545,8 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
     </div>
   </div>
 </section>
+
+<section class="pn-s"><div class="wrap"><nav class="pn" aria-label="Halaman sebelumnya dan berikutnya"><a class="btn alt" href="/layanan/" rel="prev"><span class="ar" aria-hidden="true">←</span><span><small data-t="b_prev">Sebelumnya</small><b data-t="n_lay">Layanan</b></span></a><a class="btn nx" href="/studi-kasus/" rel="next"><span><small data-t="b_next">Berikutnya</small><b data-t="n_kasus">Studi kasus</b></span><span class="ar" aria-hidden="true">→</span></a></nav></div></section>
 
 </main>
 
@@ -819,6 +829,10 @@ var I18N = {}, bahasa = 'id', negara = '';
 ["n_proy","Projects","Projek","Projetos","โปรเจกต์","Dự án"],
 ["n_kasus","Case study","Kajian kes","Estudo de caso","กรณีศึกษา","Nghiên cứu điển hình"],
 ["n_cara","How we work","Cara kerja","Como trabalhamos","ขั้นตอนการทำงาน","Quy trình làm việc"],
+["n_home","Home","Laman utama","Início","หน้าแรก","Trang chủ"],
+["n_kontak","Contact","Hubungi","Contato","ติดต่อ","Liên hệ"],
+["b_prev","Previous","Sebelumnya","Anterior","ก่อนหน้า","Trước"],
+["b_next","Next","Seterusnya","Seguinte","ถัดไป","Tiếp theo"],
 ["b_cs","Chat support","Sembang sokongan","Chat de suporte","แชทกับทีมงาน","Chat hỗ trợ"],
 ["b_quote","Request a quote","Minta sebut harga","Pedir orçamento","ขอใบเสนอราคา","Yêu cầu báo giá"],
 ["h1","Reliable digital systems for businesses, from small teams to large companies.","Sistem digital yang boleh dipercayai untuk perniagaan, dari pasukan kecil hingga syarikat besar.","Sistemas digitais confiáveis para empresas, de pequenas equipes a grandes corporações.","ระบบดิจิทัลที่เชื่อถือได้ สำหรับธุรกิจตั้งแต่ทีมเล็กจนถึงองค์กรขนาดใหญ่","Hệ thống số đáng tin cậy cho doanh nghiệp, từ nhóm nhỏ đến công ty lớn."],
