@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Proyek — RamzStore</title>
-<meta name="description" content="Jasa pengembangan website, sistem admin, integrasi pembayaran, dan otomasi untuk bisnis kecil maupun perusahaan besar. Lihat proyek nyata dan studi kasus Pandu Hub.">
+<title>Proyek Nyata: Website, Bot Discord &amp; Sistem QRIS — RamzStore</title>
+<meta name="description" content="5 proyek yang sudah berjalan: Pandu Hub, Kasir QRIS dan NotifGate, SSFC, Warung Bot, dan Paid Person Bot, lengkap dengan cerita pengembangannya.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="RamzStore — Pengembangan website dan sistem digital untuk bisnis">
-<meta property="og:description" content="Website, sistem admin, pembayaran, dan otomasi untuk bisnis dari skala kecil sampai perusahaan besar.">
+<meta property="og:title" content="Proyek Nyata: Website, Bot Discord &amp; Sistem QRIS — RamzStore">
+<meta property="og:description" content="5 proyek yang sudah berjalan: Pandu Hub, Kasir QRIS dan NotifGate, SSFC, Warung Bot, dan Paid Person Bot, lengkap dengan cerita pengembangannya.">
 <meta name="theme-color" content="#080a12">
 <link rel="canonical" href="https://ramzstore12.my.id/proyek/">
 <meta property="og:url" content="https://ramzstore12.my.id/proyek/">
@@ -16,7 +16,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RamzStore — Pengembangan website dan sistem digital untuk bisnis">
+<meta name="twitter:title" content="Proyek Nyata: Website, Bot Discord &amp; Sistem QRIS — RamzStore">
+<meta name="twitter:description" content="5 proyek yang sudah berjalan: Pandu Hub, Kasir QRIS dan NotifGate, SSFC, Warung Bot, dan Paid Person Bot, lengkap dengan cerita pengembangannya.">
 <meta name="twitter:image" content="https://ramzstore12.my.id/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2.5 35.5 11.2v17.6L20 37.5 4.5 28.8V11.2z' fill='%236b46ff'/%3E%3Cpath d='M14 28V12h8a4.8 4.8 0 0 1 0 9.6H14M21.5 21.6 27 28' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='29.5' cy='12.5' r='2.6' fill='%23ffe066'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -465,6 +466,9 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
 .pk-grid.tema{grid-template-columns:repeat(3,1fr)}
 .galeri{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-top:22px}
 .galeri:not(:has(img)){display:none}
+.galeri figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.galeri figcaption{font:500 13px/1.4 var(--body);opacity:.8}
+
 .galeri img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:rgba(255,255,255,.08);border-radius:12px;border:1px solid rgba(255,255,255,.22)}
 @media(min-width:3000px){:root{--maks:1800px}body{font-size:24px}}
 @media(min-width:1600px){:root{--maks:1280px}body{font-size:18px}}
@@ -477,8 +481,36 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
 .pn b{display:block;font:700 16px/1.2 var(--body)}
 .pn .ar{font-size:20px}
 @media(max-width:520px){.pn{flex-direction:column}.pn .btn,.pn .btn.nx{flex:none;width:100%;margin-left:0}}
+.cta-s{padding:48px 0 0}
+.cta{display:flex;gap:24px;align-items:center;justify-content:space-between;padding:28px 32px;border-radius:18px;border:1px solid var(--tepi);background:var(--kaca);backdrop-filter:blur(10px)}
+.cta h2{font:700 26px/1.2 var(--display);margin:0 0 6px}
+.cta p{margin:0;opacity:.8;max-width:56ch}
+.cta .btn{flex:none;padding:16px 26px;font-size:16px}
+@media(max-width:720px){.cta{flex-direction:column;align-items:stretch;text-align:left;padding:24px}.cta .btn{width:100%}}
+#lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px));background:rgba(4,5,12,.92);backdrop-filter:blur(6px)}
+#lb.on{display:flex}
+#lb img{max-width:min(1440px,100%);max-height:calc(100% - 70px);width:auto;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.25);box-shadow:0 20px 80px rgba(0,0,0,.6);background:#0b0d18}
+#lb p{margin:0;color:#e9e6ff;font:500 15px/1.4 var(--body);text-align:center;max-width:90ch}
+#lb button{position:absolute;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:22px;line-height:1;cursor:pointer}
+#lb button:hover{background:rgba(255,255,255,.22)}
+#lb .x{top:max(14px,env(safe-area-inset-top,0px));right:14px}
+#lb .pv{left:14px;top:50%;transform:translateY(-50%)}
+#lb .nx{right:14px;top:50%;transform:translateY(-50%)}
+.galeri img{cursor:zoom-in}
+@media(max-width:600px){#lb .pv,#lb .nx{top:auto;bottom:14px;transform:none}}
+.pbk{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding:14px 18px;border-radius:14px;border:1px solid var(--tepi);background:var(--kaca);font-size:15px;line-height:1.4}
+.pbk b{font-weight:800}
+.pbk .bk-dot{flex:none;width:9px;height:9px;border-radius:50%;background:#14d9a0;box-shadow:0 0 0 4px rgba(20,217,160,.22)}
+.pbk .bk-s{font-size:13px;opacity:.7}
+.pbk .bk-a{margin-left:auto;font-weight:600;color:inherit;text-decoration:underline;text-underline-offset:3px}
+.pbk [hidden]{display:none}
+.pbk-s{padding:28px 0 0}
+.pbk.dlm{margin-top:18px}
+@media(max-width:560px){.pbk .bk-a{margin-left:0}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"RamzStore","description":"Pengembangan website, sistem admin, integrasi pembayaran, dan otomasi untuk bisnis kecil maupun perusahaan besar.","email":"reyeuy75@gmail.com","telephone":"+6285793645776","areaServed":"ID","address":{"@type":"PostalAddress","addressLocality":"Sukabumi","addressCountry":"ID"}}</script>
+<script defer src="/analitik.js"></script>
+<script defer src="/bukti.js"></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="rs-logo" viewBox="0 0 40 40"><defs><linearGradient id="rsg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a7dff"/><stop offset="1" stop-color="#4d2fd1"/></linearGradient></defs><path d="M20 2.5 35.5 11.2v17.6L20 37.5 4.5 28.8V11.2z" fill="url(#rsg)"/><path d="M20 2.5 35.5 11.2 20 20 4.5 11.2z" fill="#fff" opacity=".14"/><path d="M14 28V12h8a4.8 4.8 0 0 1 0 9.6H14M21.5 21.6 27 28" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29.5" cy="12.5" r="2.6" fill="#ffe066"/></symbol></svg>
@@ -519,7 +551,8 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
           <li data-t="etc">dll</li>
         </ul>
         <div class="tek"><span>Node.js</span><span>discord.js</span><span>Express</span><span>OAuth2</span><span>QRIS</span><span data-t="etc">dll</span></div>
-        <div class="galeri"><img src="/gambar/pandu-1.jpg" width="960" height="540" alt="Tangkapan layar Pandu Hub 1" loading="lazy" onerror="this.remove()"><img src="/gambar/pandu-2.jpg" width="960" height="540" alt="Tangkapan layar Pandu Hub 2" loading="lazy" onerror="this.remove()"><img src="/gambar/pandu-3.jpg" width="960" height="540" alt="Tangkapan layar Pandu Hub 3" loading="lazy" onerror="this.remove()"></div>
+        <div class="pbk dlm" data-kode="sVWyJq8btz"><span class="bk-dot" aria-hidden="true"></span><span class="bk-n"><b class="bk-m">6.700+</b> <span data-t="bk_m">member di Discord Pandu Hub</span></span><span class="bk-o" hidden><b class="bk-on"></b> <span data-t="bk_o">online sekarang</span></span><span class="bk-s"><span class="bk-tg" data-t="bk_t">per Oktober 2026</span><span class="bk-lv" data-t="bk_lv" hidden>data langsung dari Discord</span></span><a class="bk-a" href="https://discord.gg/sVWyJq8btz" target="_blank" rel="noopener" data-umami-event="discord-klik" data-umami-event-dari="bukti" data-t="bk_a">Gabung server ↗</a></div>
+        <div class="galeri"><figure><img src="/gambar/pandu-1.jpg" width="960" height="540" alt="Tangkapan layar beranda Pandu Hub" loading="lazy" onerror="this.parentNode.remove()"><figcaption data-t="gal_1">Beranda — pilihan gratis dan VIP langsung terlihat</figcaption></figure><figure><img src="/gambar/pandu-2.jpg" width="960" height="540" alt="Tangkapan layar daftar paket Pandu Hub" loading="lazy" onerror="this.parentNode.remove()"><figcaption data-t="gal_2">Daftar paket — fitur dan harga tiap paket</figcaption></figure><figure><img src="/gambar/pandu-3.jpg" width="960" height="540" alt="Tangkapan layar alur pembayaran Pandu Hub" loading="lazy" onerror="this.parentNode.remove()"><figcaption data-t="gal_3">Alur pembayaran — pilih transfer ke Pandu atau RamzStore</figcaption></figure></div>
         <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn kuning sm" href="https://panduhub.my.id" target="_blank" rel="noopener">Kunjungi Pandu Hub ↗</a><a class="btn alt sm" style="border-color:#fff;color:#fff" href="/studi-kasus/">Baca studi kasus lengkap</a></div>
       </article>
       <article class="kecil">
@@ -546,7 +579,8 @@ html[data-tema=terang] header.top.open nav.menu a{border-bottom-color:var(--gari
   </div>
 </section>
 
-<section class="pn-s"><div class="wrap"><nav class="pn" aria-label="Halaman sebelumnya dan berikutnya"><a class="btn alt" href="/layanan/" rel="prev"><span class="ar" aria-hidden="true">←</span><span><small data-t="b_prev">Sebelumnya</small><b data-t="n_lay">Layanan</b></span></a><a class="btn nx" href="/studi-kasus/" rel="next"><span><small data-t="b_next">Berikutnya</small><b data-t="n_kasus">Studi kasus</b></span><span class="ar" aria-hidden="true">→</span></a></nav></div></section>
+<section class="cta-s"><div class="wrap"><div class="cta"><div><h2 data-t="cta_t">Mau sistem seperti ini?</h2><p data-t="cta_p">Ceritakan kebutuhanmu, nanti kami bantu arahkan.</p></div><a class="btn kuning" href="https://wa.me/6285793645776?text=Halo%20RamzStore%2C%20aku%20sudah%20lihat%20halaman%20Proyek%20dan%20tertarik%20bikin%20sistem%20seperti%20itu." target="_blank" rel="noopener" data-umami-event="wa-klik" data-umami-event-dari="cta-proyek" data-t="cta_b">Tertarik? Chat sekarang</a></div></div></section>
+<section class="pn-s"><div class="wrap"><nav class="pn" aria-label="Halaman sebelumnya dan berikutnya"><a class="btn alt" href="/layanan/" rel="prev" data-umami-event="nav-sebelumnya" data-umami-event-tujuan="/layanan/"><span class="ar" aria-hidden="true">←</span><span><small data-t="b_prev">Sebelumnya</small><b data-t="n_lay">Layanan</b></span></a><a class="btn nx" href="/studi-kasus/" rel="next" data-umami-event="nav-berikutnya" data-umami-event-tujuan="/studi-kasus/"><span><small data-t="b_next">Berikutnya</small><b data-t="n_kasus">Studi kasus</b></span><span class="ar" aria-hidden="true">→</span></a></nav></div></section>
 
 </main>
 
@@ -626,6 +660,8 @@ if (daftar) LAYANAN.forEach(l => {
   daftar.appendChild(label);
 });
 
+function lacak(n, d){ try { if (window.umami) window.umami.track(n, { dari: d }); } catch (e) {} }
+
 function pesan(){
   const baris = LAYANAN.filter(l => dipilih.has(l.id)).map(l => '- ' + l.nama);
   return 'Halo ' + CONFIG.nama + ', aku mau minta penawaran untuk:\n' + baris.join('\n') + (negara ? '\n\nNegara: ' + negara + ' (' + bahasa.toUpperCase() + ')' : '') + '\n\nIni kebutuhanku: ';
@@ -639,7 +675,7 @@ function tombol(){
     b.type = 'button'; b.className = 'btn' + (alt ? ' alt' : ''); b.textContent = teks;
     b.disabled = !ada; b.addEventListener('click', aksi); box.appendChild(b);
   };
-  if (CONFIG.whatsapp) buat(T('b_wa') || 'Kirim lewat WhatsApp', () => window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(pesan()), '_blank', 'noopener'));
+  if (CONFIG.whatsapp) buat(T('b_wa') || 'Kirim lewat WhatsApp', () => { lacak('wa-klik', 'form-penawaran'); window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(pesan()), '_blank', 'noopener'); });
   if (CONFIG.discord) buat(T('b_dc') || 'Salin pesan untuk Discord', async e => {
     try { await navigator.clipboard.writeText(pesan()); e.target.textContent = (T('b_ok') || 'Tersalin. Kirim ke') + ' ' + CONFIG.discord; }
     catch { window.prompt('Salin pesan ini:', pesan()); }
@@ -661,7 +697,7 @@ perbarui();
 (function(){
   const box = $('#tombolKontak'); let n = 0;
   if (!box) return;
-  const tambah = (teks, href, ext, kunci) => { const a = document.createElement('a'); a.className = 'btn'; a.textContent = teks; if (kunci) a.dataset.t = kunci; a.href = href; if (ext) { a.target = '_blank'; a.rel = 'noopener'; } box.appendChild(a); n++; };
+  const tambah = (teks, href, ext, kunci) => { const a = document.createElement('a'); a.className = 'btn'; a.textContent = teks; if (kunci) a.dataset.t = kunci; a.href = href; a.setAttribute('data-umami-event', 'kontak-klik'); a.setAttribute('data-umami-event-tujuan', kunci || teks); if (ext) { a.target = '_blank'; a.rel = 'noopener'; } box.appendChild(a); n++; };
   if (CONFIG.whatsapp) tambah('Chat WhatsApp', 'https://wa.me/' + CONFIG.whatsapp, true, 'c_wa');
   if (CONFIG.discord) tambah('Discord: ' + (CONFIG.discord.startsWith('http') ? 'buka profil' : CONFIG.discord), CONFIG.discord.startsWith('http') ? CONFIG.discord : '/#nota-pesan', CONFIG.discord.startsWith('http'));
   if (CONFIG.email) tambah('Kirim email', 'mailto:' + CONFIG.email, false, 'c_em');
@@ -728,7 +764,7 @@ if ($('#tutupSemua')) $('#tutupSemua').addEventListener('click', () => fase().fo
   const wa = q => 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(q);
 
   const fk = $('#ftKontak');
-  if (CONFIG.whatsapp) { const a = el('a', '', 'WhatsApp'); a.href = wa('Halo ' + CONFIG.nama + ', aku dari website.'); a.target = '_blank'; a.rel = 'noopener'; fk.appendChild(a); }
+  if (CONFIG.whatsapp) { const a = el('a', '', 'WhatsApp'); a.setAttribute('data-umami-event', 'wa-klik'); a.setAttribute('data-umami-event-dari', 'footer'); a.href = wa('Halo ' + CONFIG.nama + ', aku dari website.'); a.target = '_blank'; a.rel = 'noopener'; fk.appendChild(a); }
   if (CONFIG.email) { const a = el('a', '', CONFIG.email); a.href = 'mailto:' + CONFIG.email; fk.appendChild(a); }
   if (CONFIG.discord) fk.appendChild(el('span', '', 'Discord: ' + CONFIG.discord));
 
@@ -771,7 +807,7 @@ if ($('#tutupSemua')) $('#tutupSemua').addEventListener('click', () => fase().fo
     [r.go, r.go2].forEach(g => { if (!g) return; const a = el('a', 'act', g[1]); a.href = g[0]; if (/^https?:/.test(g[0])) { a.target = '_blank'; a.rel = 'noopener'; } else a.addEventListener('click', () => { if (innerWidth < 600) tutup(); }); w.appendChild(a); });
     if (r.h) {
       const pre = 'Halo ' + CONFIG.nama + ', aku tadi chat di website.' + (q ? ' Pertanyaanku: ' + q : '');
-      if (CONFIG.whatsapp) { const a = el('a', 'act wa', 'WhatsApp'); a.href = wa(pre); a.target = '_blank'; a.rel = 'noopener'; w.appendChild(a); }
+      if (CONFIG.whatsapp) { const a = el('a', 'act wa', 'WhatsApp'); a.setAttribute('data-umami-event', 'wa-klik'); a.setAttribute('data-umami-event-dari', 'chat-asisten'); a.href = wa(pre); a.target = '_blank'; a.rel = 'noopener'; w.appendChild(a); }
       if (CONFIG.email) { const a = el('a', 'act', 'Email'); a.href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent('Tanya jasa') + '&body=' + encodeURIComponent(pre); w.appendChild(a); }
       if (CONFIG.discord) { const b = el('button', 'act', 'Salin Discord'); b.type = 'button'; b.addEventListener('click', async () => { try { await navigator.clipboard.writeText(CONFIG.discord); b.textContent = 'Tersalin: ' + CONFIG.discord; } catch { b.textContent = CONFIG.discord; } }); w.appendChild(b); }
     }
@@ -833,6 +869,17 @@ var I18N = {}, bahasa = 'id', negara = '';
 ["n_kontak","Contact","Hubungi","Contato","ติดต่อ","Liên hệ"],
 ["b_prev","Previous","Sebelumnya","Anterior","ก่อนหน้า","Trước"],
 ["b_next","Next","Seterusnya","Seguinte","ถัดไป","Tiếp theo"],
+["bk_m","members in the Pandu Hub Discord","ahli dalam Discord Pandu Hub","membros no Discord do Pandu Hub","สมาชิกใน Discord ของ Pandu Hub","thành viên trên Discord Pandu Hub"],
+["bk_o","online now","dalam talian sekarang","online agora","ออนไลน์ตอนนี้","đang online"],
+["bk_t","as of October 2026","setakat Oktober 2026","em outubro de 2026","ณ เดือนตุลาคม 2026","tính đến tháng 10/2026"],
+["bk_lv","live from Discord","terus dari Discord","ao vivo do Discord","ข้อมูลสดจาก Discord","trực tiếp từ Discord"],
+["bk_a","Join the server ↗","Sertai server ↗","Entrar no servidor ↗","เข้าร่วมเซิร์ฟเวอร์ ↗","Tham gia máy chủ ↗"],
+["gal_1","Home — free and VIP options at a glance","Laman utama — pilihan percuma dan VIP sekali pandang","Início — opções grátis e VIP à vista","หน้าแรก — เห็นตัวเลือกฟรีและ VIP ทันที","Trang chủ — thấy ngay lựa chọn miễn phí và VIP"],
+["gal_2","Plans — features and price of each plan","Pakej — ciri dan harga setiap pakej","Planos — recursos e preço de cada plano","แพ็กเกจ — ฟีเจอร์และราคาของแต่ละแพ็กเกจ","Gói — tính năng và giá của từng gói"],
+["gal_3","Payment flow — choose to pay Pandu or RamzStore","Aliran pembayaran — pilih bayar kepada Pandu atau RamzStore","Fluxo de pagamento — escolha pagar ao Pandu ou à RamzStore","ขั้นตอนชำระเงิน — เลือกโอนให้ Pandu หรือ RamzStore","Quy trình thanh toán — chọn chuyển cho Pandu hoặc RamzStore"],
+["cta_t","Want a system like this?","Mahu sistem seperti ini?","Quer um sistema como este?","อยากได้ระบบแบบนี้ไหม?","Muốn một hệ thống như thế này?"],
+["cta_p","Tell us what you need and we will help point you in the right direction.","Ceritakan keperluan anda dan kami akan bantu mengarahkan.","Conte o que você precisa e vamos ajudar a definir o caminho.","บอกความต้องการของคุณ แล้วเราจะช่วยแนะนำแนวทางให้","Hãy cho chúng tôi biết nhu cầu của bạn, chúng tôi sẽ giúp định hướng."],
+["cta_b","Interested? Chat now","Berminat? Sembang sekarang","Interessado? Fale agora","สนใจไหม? แชทเลย","Quan tâm? Chat ngay"],
 ["b_cs","Chat support","Sembang sokongan","Chat de suporte","แชทกับทีมงาน","Chat hỗ trợ"],
 ["b_quote","Request a quote","Minta sebut harga","Pedir orçamento","ขอใบเสนอราคา","Yêu cầu báo giá"],
 ["h1","Reliable digital systems for businesses, from small teams to large companies.","Sistem digital yang boleh dipercayai untuk perniagaan, dari pasukan kecil hingga syarikat besar.","Sistemas digitais confiáveis para empresas, de pequenas equipes a grandes corporações.","ระบบดิจิทัลที่เชื่อถือได้ สำหรับธุรกิจตั้งแต่ทีมเล็กจนถึงองค์กรขนาดใหญ่","Hệ thống số đáng tin cậy cho doanh nghiệp, từ nhóm nhỏ đến công ty lớn."],
@@ -954,6 +1001,41 @@ function terapkan(l){
   addEventListener('keydown', e => { if (e.key === 'Escape' && !pk.hidden) tutup(); });
   let saved = null; try { saved = JSON.parse(localStorage.getItem('rsLoc')); } catch {}
   if (saved && saved.l) { negara = saved.n; terapkan(saved.l); } else { let s = null; try { s = sessionStorage.getItem('rsSkip'); } catch {} if (!s) buka(); }
+})();
+</script>
+<script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('.galeri img'));
+  if(!imgs.length) return;
+  var lb=document.createElement('div');
+  lb.id='lb'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true'); lb.setAttribute('aria-label','Pratinjau gambar');
+  lb.innerHTML='<button class="x" type="button" aria-label="Tutup">\u2715</button><button class="pv" type="button" aria-label="Sebelumnya">\u2190</button><img alt=""><p></p><button class="nx" type="button" aria-label="Berikutnya">\u2192</button>';
+  document.body.appendChild(lb);
+  var big=lb.querySelector('img'), cap=lb.querySelector('p'), cur=0, back=null;
+  function live(){ return imgs.filter(function(i){ return i.isConnected; }); }
+  function show(n){
+    var l=live(); if(!l.length) return close();
+    cur=(n+l.length)%l.length;
+    var im=l[cur], fc=im.parentNode.querySelector('figcaption');
+    big.src=im.currentSrc||im.src; big.alt=im.alt; cap.textContent=fc?fc.textContent:'';
+    lb.querySelector('.pv').style.display=lb.querySelector('.nx').style.display=l.length>1?'':'none';
+  }
+  function open(im){ back=im; lb.classList.add('on'); document.documentElement.style.overflow='hidden'; show(live().indexOf(im)); lb.querySelector('.x').focus(); }
+  function close(){ lb.classList.remove('on'); document.documentElement.style.overflow=''; big.removeAttribute('src'); if(back&&back.focus) back.focus(); }
+  imgs.forEach(function(im){
+    im.tabIndex=0; im.setAttribute('role','button'); im.setAttribute('aria-label','Perbesar gambar: '+im.alt);
+    im.addEventListener('click',function(){ open(im); });
+    im.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(im); } });
+  });
+  lb.addEventListener('click',function(e){ if(e.target===lb||e.target.classList.contains('x')) close(); });
+  lb.querySelector('.pv').addEventListener('click',function(){ show(cur-1); });
+  lb.querySelector('.nx').addEventListener('click',function(){ show(cur+1); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('on')) return;
+    if(e.key==='Escape') close();
+    else if(e.key==='ArrowLeft') show(cur-1);
+    else if(e.key==='ArrowRight') show(cur+1);
+  });
 })();
 </script>
 </body>
